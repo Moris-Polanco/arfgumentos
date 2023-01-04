@@ -2,7 +2,7 @@ import streamlit as st
 import openai
 
 # Inicializa el modelo GPT-3
-openai.api_key = 
+openai.api_key = os.environ.get("OPENAI_API_KEY")
 model_engine = "text-davinci-003"
 
 def generate_arguments(prompt):
