@@ -20,7 +20,9 @@ def generate_arguments(prompt):
   return message.strip()
 
 # Define la interfaz de usuario con streamlit
-st.title("Generador de argumentos con GPT-3")
+st.title("Generador de argumentos")
+
+st.caption("Por Moris Polanco")
 
 # Solicita al usuario que introduzca un tema
 topic = st.text_input("Introduce el tema sobre el que quieres elaborar un argumento:")
