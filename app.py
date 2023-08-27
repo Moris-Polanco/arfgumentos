@@ -2,8 +2,14 @@ import streamlit as st
 import openai
 import os
 
-# Inicializa el modelo GPT-3
-openai.api_key = os.environ.get("OPENAI_API_KEY")
+# Configurar la clave de la API de OpenAI
+api_key = st.text_input("Enter your OpenAI API key", type="password")
+if not api_key:
+    st.warning("Please enter a valid API key to continue.")
+else:
+    openai.api_key = api_key
+    # Continuar con el resto del código que utiliza la clave de API
+
 model_engine = "text-davinci-003"
 
 def generate_arguments(prompt):
